@@ -1,0 +1,171 @@
+html {
+    min-height: 100vh;
+}
+
+body {
+    font-family:sans-serif;
+    margin: 0;
+    margin-left: 250px;
+    color: #252a32;
+}
+
+* {
+    box-sizing:border-box;
+}
+
+#showcase {
+    background-image: url('./img/showcase.jpg');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+#showcase h1 {
+    font-size: 50px;
+    line-height: 1.2;
+}
+
+#showcase p {
+    font-size: 20px;
+}
+
+#showcase .button {
+    font-size: 18px;
+    text-decoration: none;
+    color: #252a32;
+    border: #252a32 1px solid;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+#showcase .button:hover {
+    background: #252a32;
+    color: #fff;
+}
+
+.img-brand {
+    width: 80%;
+}
+
+.container {
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 1000px;
+    text-align: center;
+}
+
+#navBar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    background-color: #252a32;
+    color: white;
+    top: 0;
+    left: 0;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#section-a {
+    padding: 20px;
+    background: #252a32;
+    color: white;
+    text-align: center;
+}
+
+#section-b {
+    padding: 20px;
+    background: #fff;
+    color: #252a32;
+    text-align: center;
+}
+
+#section-c {
+    padding: 20px;
+    background: #252a32;
+    color: white;
+    text-align: center;
+}
+
+#section-d {
+    display: flex;
+    padding: 20px;
+    background: #606d83;
+    color: white;
+    text-align: center;
+}
+
+.nav-brand {
+    text-align: center;
+
+}
+
+.nav-items {
+    padding-inline-start: 0;
+}
+
+.nav-items > li {
+     list-style-type: none;
+     margin-bottom: 10px;
+     text-align: center;
+     font-size: 18px;
+}
+
+.nav-items > li:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+.footer {
+    text-align: center;
+}
+
+#hamburgerBtn {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    display: none;
+    z-index: 10;
+}
+
+#hamburgerBtn:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+@media only screen and (max-width: 768px) {
+
+
+    body {
+        margin-left: 0px;
+    }
+
+    #navBar {
+        width: 100vw;
+        transform: translateX(-1000px);
+        transition: transform 500ms;
+    }
+
+    #navBar.open {
+        transform: translateX(0);
+    }
+
+    .nav-items > li {
+        text-align: center;
+    }
+
+    #hamburgerBtn {
+        display: inline-block;
+        font-size: 2em;
+        color: #252a32;
+        text-shadow: white 0 0 2px, white 0px 0 5px;
+    }
+}
