@@ -97,7 +97,7 @@ section h2 {
     font-size: 20px;
 }
 
-#showcase .button {
+body .button {
     font-size: 18px;
     text-decoration: none;
     color: #252a32;
@@ -164,9 +164,12 @@ section h2 {
     background: #fff;
     color: #252a32;
     text-align: center;
-    background: #9CECFB;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #0052D4, #65C7F7, #9CECFB);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #0052D4, #65C7F7, #9CECFB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ /*   background: #9CECFB;  /* fallback for old browsers 
+    background: -webkit-linear-gradient(to left, #0052D4, #65C7F7, #9CECFB);  /* Chrome 10-25, Safari 5.1-6 
+    background: linear-gradient(to left, #0052D4, #65C7F7, #9CECFB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ 
+   */ background-image: url('./img/showcase.jpg');
+    background-position: center;
+    background-size: cover;
 }
 
 #section-c {
