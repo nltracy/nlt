@@ -249,7 +249,7 @@ background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, F
 
 .bubble {
     position: absolute;
-    margin-top: -5px;
+    padding-top: 25px;
     z-index: -2;
     background: -webkit-linear-gradient(to right, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
