@@ -33,7 +33,7 @@ function navCheck(entries) {
         const directions = {
             height: coords.height,
             width: coords.width,
-            top: coords.top,
+            top: coords.top - 17,
             left: coords.left
         };
 
