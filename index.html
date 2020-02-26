@@ -24,27 +24,43 @@
 </head>
 
 <body>
-    <header id="showcase">
+    <header>
+        
+        <nav id="navBar">
+            
+            <ul class="nav-items">
+                <li></li><div class="nav-brand">
+                    <a data-page="logo" href="#"><img src=".\img\roundLogo.png" alt="NLT Logo" class="img-brand"></a>
+                </div></li>
+                <li><a data-page="home" href="#">Home</a></li>
+                <li><a data-page="about" href="#">About</a></li>
+                <li><a data-page="blog" href="#">Blog</a></li>
+                <li><a data-page="merch" href="#">Merch</a></li>
+                <div class="bubble"></div>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+    <section class="home" data-index="0" id="section-a">
         <h1>A Fresh Page</h1>
         <p>A new start for an old idea.</p>
         <a href="#" class="button">Read More</a>
-    </header>
-    <section id="section-a">
+    </section>
+    <section class="about" data-index="1" id="section-b">
+        <h2>About</h>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam repudiandae
              nesciunt autem impedit incidunt nisi odio sit dolore nemo corporis unde
               possimus facere, hic debitis.</p>
     </section>
-    <section id="section-b">
+    <section class="blog" data-index="2" id="section-c">
+        <h2>Blog</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam repudiandae
              nesciunt autem impedit incidunt nisi odio sit dolore nemo corporis unde
               possimus facere, hic debitis.</p>
     </section>
-    <section id="section-c">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam repudiandae
-             nesciunt autem impedit incidunt nisi odio sit dolore nemo corporis unde
-              possimus facere, hic debitis.</p>
-    </section>
-    <section id="section-d">
+    <section class="merch" data-index="3" id="section-d">
+        <h2>Merch</h2>
         <div class ="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam repudiandae
              nesciunt autem impedit incidunt nisi odio sit dolore nemo corporis unde
               possimus facere, hic debitis.</div>
@@ -56,25 +72,15 @@
                  possimus facere, hic debitis.</div>      
     </section>
 
-    <span id="hamburgerBtn">&#9776</span>
-<nav id="navBar">
-    <div class="nav-brand">
-        <p>N Lloyd Tracy</p>
-        <img src=".\img\roundLogo.png" alt="NLT Logo" class="img-brand">
-    </div>
-    <script src="app.js"></script>
-    <ul class="nav-items">
-        <li>Home</li>
-        <li>About</li>
-        <li>Blog</li>
-        <li>Merch</li>
-    </ul>
-    <div class="footer">
-        <p>N Lloyd Tracy<br/>
-        Copyright 2020</p>
-    </div>
-</nav>
+</main>
 
+    <span id="hamburgerBtn">&#9776</span>
+
+    <div class="footer">
+        <p>Copyright 2018 - <span id="currYear"></span> <mailto:"nltracy@comcast.net">N Lloyd Tracy</mailto:>N Lloyd Tracy</p>
+    </div>
+<script src="app.js"></script>
 
 </body>
+
 </html>
