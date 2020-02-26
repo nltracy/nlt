@@ -22,6 +22,11 @@ header {
 
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
 nav {
     min-height: 10vh;
     margin: auto;
@@ -54,6 +59,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 section h2 {
@@ -64,9 +70,14 @@ section h2 {
 .footer {
     background: #252a32;
     color: white;
-    box-shadow: 8px 0 10px rgba(0,0,0, 0.0);
+    box-shadow: 0px -5px 15px rgba(0,0,0, 0.0);
+    z-index: 3;
 }
 
+.mailme a:link, a:visited {
+    text-decoration: none;
+    color: white;
+}
 
 #showcase {
 /*    background-image: url('./img/showcase.jpg');
