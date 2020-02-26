@@ -11,16 +11,20 @@ const gradients = [
     "#606d83"
 ];
 
+//How much of the section needs to show? 70% at default
 const options = {
     threshold: 0.7
 };
 
+//This checks for Intersections
 let observer = new IntersectionObserver(navCheck, options);
 
+// Place the observers on the sections in html
 sections.forEach(section => {
     observer.observe(section);
 });
 
+// If set the current section on screen and make changes
 function navCheck(entries) {
     entries.forEach(entry => {
         const className = entry.target.className;
