@@ -64,7 +64,7 @@ section h2 {
 .footer {
     background: #252a32;
     color: white;
-
+    box-shadow: 8px 0 10px rgba(0,0,0, 0.0);
 }
 
 
