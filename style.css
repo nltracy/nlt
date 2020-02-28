@@ -226,7 +226,8 @@ background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, F
      text-align: center;
      font-size: 18px;
      width: 90%;
-     align-items: right;
+     align-items: center;
+     right: 5px;
      
     
 }
