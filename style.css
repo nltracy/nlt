@@ -19,13 +19,11 @@ header {
     box-shadow: 0px 3px 10px rgba(0,0,0,1.0);
     position: sticky;
     top: 0px;
+    z-index: 10;
 
 }
 
-a {
-    color: white;
-    text-decoration: none;
-}
+
 
 nav {
     min-height: 10vh;
@@ -33,7 +31,11 @@ nav {
     align-items: center;
     justify-content: space-between;
     display: flex;
+    }
 
+nav > a:link, a:visited {
+    text-decoration: none;
+    color: white;
 }
 
 nav h1, ul {
@@ -53,6 +55,54 @@ nav a {
     text-decoration: none;
     margin: 0px 35px;
 }
+
+.pop-out {
+    position: absolute;
+    bottom: 20px;
+    right: 0px;
+    height: 350px;
+    width: 200px;
+    background: white;
+    box-shadow: 4px 4px 14px #252a32;
+    border: 3px #252a32;
+    border-radius: 6px;
+}
+
+.pop-out-right {
+    
+        position: absolute;
+        bottom: 20px;
+        right: 0px;
+        height: 350px;
+        width: 200px;
+        background: white;
+        box-shadow: 4px 4px 14px #252a32;
+        border: 3px #252a32;
+        border-radius: 0px 0px 0px 6px;
+        z-index: 4;
+    }
+
+.pop-tag-right {
+    position: relative;
+    top: 75px;
+    left: -25px;
+    height: 25px;
+    width: 75px;
+    background: white;
+    border: 3px #252a32;
+    border-radius: 6px 6px 0px 0px;
+    z-index: 3;
+    transform-origin: 0 0;
+  transform: rotate(270deg);
+  color: #252a32;
+  }
+
+
+
+.pop-tag-right a {
+    padding: 2px;
+}
+
 
 section {
     min-height: 100vh;
@@ -74,7 +124,7 @@ section h2 {
     z-index: 3;
 }
 
-.mailme a:link, a:visited {
+.footer > a:link, a:visited {
     text-decoration: none;
     color: white;
 }
@@ -220,6 +270,20 @@ background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, F
     left: 5px;
 }
 
+.home-announce {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+    height: 200px;
+    width: 500px;
+    background: white;
+    box-shadow: 4px 4px 14px #252a32;
+    border: 3px #252a32;
+    border-radius: 6px;
+}
+
+
+
 .nav-items {
     list-style-type: none;
      margin-bottom: 10px;
@@ -242,7 +306,7 @@ background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, F
 
 .nav-items > li:hover {
     cursor: pointer;
-    transform: scale(1.01);
+    transform: scale(1.03);
 }
 
 .footer {
@@ -275,6 +339,10 @@ background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, F
     border-bottom-right-radius: 7px;
 }
 
+.pop-tag-right > a {
+    color: #252a32;
+    text-decoration: none;
+}
 
 @media only screen and (max-width: 768px) {
 
