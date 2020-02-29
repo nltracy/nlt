@@ -1,3 +1,7 @@
+//GLOBALLY HELPFUL VARIABLES AND CONSTANTS
+const newsTimeout = 30000; // Timeout the news tag after dismissing blurb, currently 30 seconds 
+
+
 //NEWS Bubble on Front page controls
 //Mostly minimize/maximize functions
 const announcement = document.querySelector('.home-announce');
@@ -11,10 +15,11 @@ function newsToggle() {
     announcement.classList.toggle("closed");
     announcementNews.classList.toggle("open");
     announcementText.classList.toggle("off");
- /*   
+    
+    //kill the news blurb after a set amount of time
     if (announcement.classList.contains('closed')) {
-        setTimeout(killNews(), 3000);
-    } */
+        setTimeout(killNews, newsTimeout);
+    } 
 }
 
 
