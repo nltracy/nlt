@@ -1,3 +1,15 @@
+//NEWS Bubble on Front page controls
+//Mostly minimize/maximize functions
+const announcement = document.querySelector('.home-announce');
+const announcementNews = document.querySelector('.news-flash');
+const dismissButton = document.querySelector('.dismiss-me');
+
+
+function newsToggle() {
+    announcement.classList.toggle("closed");
+    announcementNews.classList.toggle("open");
+    announcementNews.querySelectorAll(".top-news-detail").classList.toggle("off");
+}
 
 
 //Menu cursor program, checks for a section intersecting the screen
@@ -41,9 +53,6 @@ function navCheck(entries) {
             left: coords.left
         };
 
-        console.log(directions.left);
-
-
         if (entry.isIntersecting) {
             bubble.style.setProperty("left", `${directions.left}px`);
             bubble.style.setProperty("top", `${directions.top}px`);
@@ -58,7 +67,7 @@ function navCheck(entries) {
 //Get current year and set the copyright message in the footer
 document.getElementById('currYear').appendChild(document.createTextNode(new Date().getFullYear()));
 
-
+//Menu open button for small displays and minimized browser schemes
 const hamburgerBtn = document.getElementById('hamburgerBtn');
 const navBar = document.getElementById('navBar');
 

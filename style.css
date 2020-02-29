@@ -7,6 +7,7 @@
 html {
     min-height: 100vh;
     margin-top: 0px;
+    text-decoration: none;
 }
 
 body {
@@ -274,15 +275,89 @@ background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, F
     position: absolute;
     top: 120px;
     left: 20px;
-    height: 200px;
     width: 500px;
-    background: white;
+    max-height: 500px;
+    background: #777;
     box-shadow: 4px 4px 14px #252a32;
+    outline: 3px #252a32;
     border: 3px #252a32;
-    border-radius: 6px;
+    border-radius: 6px 6px;
+    text-align: justify;
+    padding: 25px;
+    overflow-x: hidden;
+    animation: backFlash 3s infinite;
+    transition: ease .5s;
+    display: block;
 }
 
+.news-flash {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+    background: #777;
+    text-align: justify;
+    padding: 25px;
+    overflow-x: hidden;
+    display: none;
+}
 
+@keyframes backFlash {
+    50% { background: #444 ;}
+}
+
+.home-announce > p {
+    padding: 25px;
+    text-shadow: 4px 4px 6px #14171b;
+    text-decoration: #283E51 1px;
+}
+
+.home-announce > h2 {
+    padding-top: 25px;
+    font-size: 2rem;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+#dismiss-me {
+    font-size: 24;
+    font: arial, sans-serif;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#news-flash {
+    font-size: 24;
+    font: arial, sans-serif;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    display: none;
+}
+
+#news-flash > a:link a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.open {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    background: rgba(0,0,0, 0.0);
+    text-align: justify;
+    padding: 25px;
+    overflow-x: hidden;
+    display: block;
+}
+
+.closed {
+    visibility: hidden;
+}
 
 .nav-items {
     list-style-type: none;
