@@ -6,10 +6,21 @@ const dismissButton = document.querySelector('.dismiss-me');
 
 
 function newsToggle() {
+    announcement.classList.toggle("paused");
     announcement.classList.toggle("closed");
     announcementNews.classList.toggle("open");
     announcementNews.querySelectorAll(".top-news-detail").classList.toggle("off");
 }
+
+// Feeback Form on the pop-out-right div
+// Slide the form open
+
+const feedbackStatus = document.querySelector('.pop-out-right');
+
+function feedbackSlide() {
+    feedbackStatus.classList.toggle("open-pop")
+}
+
 
 
 //Menu cursor program, checks for a section intersecting the screen

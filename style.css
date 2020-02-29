@@ -2,12 +2,13 @@
     box-sizing:border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 html {
     min-height: 100vh;
     margin-top: 0px;
-    text-decoration: none;
+    
 }
 
 body {
@@ -21,10 +22,11 @@ header {
     position: sticky;
     top: 0px;
     z-index: 10;
-
 }
 
-
+a {
+    color: white;
+}
 
 nav {
     min-height: 10vh;
@@ -69,18 +71,25 @@ nav a {
     border-radius: 6px;
 }
 
-.pop-out-right {
-    
+.panel {
         position: absolute;
         bottom: 20px;
         right: 0px;
         height: 350px;
-        width: 200px;
+}
+
+.pop-out-right {
+    
+        position: sticky;
+        top: 120px;
+        height: 350px;
+        width: 0px;
         background: white;
         box-shadow: 4px 4px 14px #252a32;
         border: 3px #252a32;
         border-radius: 0px 0px 0px 6px;
         z-index: 4;
+        transition: ease-in-out .5s;
     }
 
 .pop-tag-right {
@@ -104,6 +113,11 @@ nav a {
     padding: 2px;
 }
 
+.open-pop {
+    width: 200px;
+    height: 350px;
+    transition: ease-in-out .5s;
+}
 
 section {
     min-height: 100vh;
@@ -272,7 +286,7 @@ background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, F
 }
 
 .home-announce {
-    position: absolute;
+    position: fixed;
     top: 120px;
     left: 20px;
     width: 500px;
@@ -286,7 +300,6 @@ background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, F
     padding: 25px;
     overflow-x: hidden;
     animation: backFlash 3s infinite;
-    transition: ease .5s;
     display: block;
 }
 
@@ -299,10 +312,19 @@ background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, F
     padding: 25px;
     overflow-x: hidden;
     display: none;
-}
+
+    }
 
 @keyframes backFlash {
     50% { background: #444 ;}
+}
+
+/* Pause any animation in CSS */
+.paused{
+    -webkit-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused; 
+    animation-play-state:paused;
 }
 
 .home-announce > p {
@@ -336,16 +358,17 @@ background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, F
     right: 15px;
     cursor: pointer;
     text-decoration: none;
+    
     display: none;
 }
 
-#news-flash > a:link a:visited {
+#news-flash a {
     color: white;
     text-decoration: none;
 }
 
 .open {
-    position: absolute;
+    position: fixed;
     top: 100px;
     left: 20px;
     background: rgba(0,0,0, 0.0);
@@ -353,6 +376,7 @@ background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, F
     padding: 25px;
     overflow-x: hidden;
     display: block;
+    text-shadow: 4px 4px 5px rgba(5, 5, 5, 1.0);
 }
 
 .closed {
@@ -416,7 +440,6 @@ background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, F
 
 .pop-tag-right > a {
     color: #252a32;
-    text-decoration: none;
 }
 
 @media only screen and (max-width: 768px) {
