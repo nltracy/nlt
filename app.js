@@ -3,14 +3,20 @@
 const announcement = document.querySelector('.home-announce');
 const announcementNews = document.querySelector('.news-flash');
 const dismissButton = document.querySelector('.dismiss-me');
+const announcementText = document.querySelector('.top-news-detail');
 
-
+console.log(announcementText);
 function newsToggle() {
     announcement.classList.toggle("paused");
     announcement.classList.toggle("closed");
     announcementNews.classList.toggle("open");
-    announcementNews.querySelectorAll(".top-news-detail").classList.toggle("off");
+    announcementText.classList.toggle("off");
+    
+    if (announcement.classList.contains('closed')) {
+        setTimeout(killNews(), 3000);
+    }
 }
+
 
 // Feeback Form on the pop-out-right div
 // Slide the form open
@@ -19,6 +25,11 @@ const feedbackStatus = document.querySelector('.pop-out-right');
 
 function feedbackSlide() {
     feedbackStatus.classList.toggle("open-pop")
+}
+
+//Close the news tab forever
+function killNews() {
+    announcement.style.setProperty("display", "none")
 }
 
 
