@@ -5,16 +5,16 @@ const announcementNews = document.querySelector('.news-flash');
 const dismissButton = document.querySelector('.dismiss-me');
 const announcementText = document.querySelector('.top-news-detail');
 
-console.log(announcementText);
+console.log("AnnouncementText selected: ", announcementText);
 function newsToggle() {
     announcement.classList.toggle("paused");
     announcement.classList.toggle("closed");
     announcementNews.classList.toggle("open");
     announcementText.classList.toggle("off");
-    
+ /*   
     if (announcement.classList.contains('closed')) {
         setTimeout(killNews(), 3000);
-    }
+    } */
 }
 
 
@@ -29,7 +29,7 @@ function feedbackSlide() {
 
 //Close the news tab forever
 function killNews() {
-    announcement.style.setProperty("display", "none")
+    announcementNews.style.setProperty("display", "none")
 }
 
 
