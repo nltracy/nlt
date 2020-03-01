@@ -265,7 +265,34 @@ background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, F
     text-align: center;
 }
 
+#section-e { /* LOGIN FORM DIV */
+    
+    top: -1000px;
+    left: 10vw;
+    background: #939597;
+    color: white;
+    text-align: center;
+    height: 80vh;
+    width: 80%;
+    margin: 0;
+    min-height: 400px;
+    min-width: 400px;
+    position: fixed;
+    z-index: 4;
+    box-shadow: 0px 3px 10px rgba(0,0,0,1.0);
+    border-radius: 6px 6px;
+}
 
+.closeLogin {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+#feedbackForm {
+    padding: 3px;
+    font-size: x-large;
+}
 
 .nav-brand {
     text-align: center;
@@ -434,11 +461,12 @@ background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, F
 .bubble {
     position: absolute;
     padding-top: 25px;
+    padding-bottom: 15px;
     z-index: -2;
     background: -webkit-linear-gradient(to right, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     transform: scale(2);
-    padding: 1rem;
+    
     transition: all 0.5s ease;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;

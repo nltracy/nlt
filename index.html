@@ -36,6 +36,9 @@
                 <li><a data-page="about" href="#section-b">About</a></li>
                 <li><a data-page="blog" href="#section-c">Blog</a></li>
                 <li><a data-page="merch" href="#section-d">Merch</a></li>
+                <!--Login section should be section-e, hidden by default and
+                     when logged in cahnge to user name and link-->
+                <li><a data-page="login" href="javascript:void(0)" onclick="loginForm()">Login</a></li>
                 <div class="bubble"></div>
             </ul>
         </nav>
@@ -46,6 +49,9 @@
      <div class="panel">
         <div class="pop-out-right"> <!--Pop out help panel-->
             <div class="pop-tag-right"><a href="javascript:void(0)" onclick="feedbackSlide()" class="pop-tag-label">Feedback</a></div>
+        <div id="feedbackForm">
+            <p>Thanks for stopping in, by filling out the comment form below, we can serve you better.</p>
+        </div>
         </div>
     </div>
 
@@ -96,6 +102,13 @@
                 nesciunt autem impedit incidunt nisi odio sit dolore nemo corporis unde
                  possimus facere, hic debitis.</div>      
     </section>
+
+    <section class="login" data-index="4" id="section-e">
+        <h3 class="closeLogin"><a href="javascript:void(0)" onclick="loginFormClose()">X</a></h3>
+        <h2>Login</h2>
+        <div class ="box1">Form goes here.</div>    
+    </section>
+
 
 </main>
 

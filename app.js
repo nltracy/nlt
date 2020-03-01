@@ -29,15 +29,27 @@ function newsToggle() {
 const feedbackStatus = document.querySelector('.pop-out-right');
 
 function feedbackSlide() {
-    feedbackStatus.classList.toggle("open-pop")
+    feedbackStatus.classList.toggle("open-pop");
 }
 
 //Close the news tab forever
 function killNews() {
-    announcementNews.style.setProperty("display", "none")
+    announcementNews.style.setProperty("display", "none");
 }
 
+//open or close the login page
+const loginWindow = document.getElementById('section-e');
 
+function loginForm() {
+    loginWindow.style.top = '125px';
+    loginWindow.style.height = '80vh';
+}
+
+function loginFormClose() {
+    loginWindow.style.top = 'initial';
+    loginWindow.style.height = 'initial';
+    navCheck();
+}
 
 //Menu cursor program, checks for a section intersecting the screen
 //and moving the cursor appropriately
@@ -47,7 +59,8 @@ const gradients = [
     "linear-gradient(to right, #283E51, #4B79A1)",
     "linear-gradient(to left, #0052D4, #65C7F7, #9CECFB)",
     "linear-gradient(to right, #536976, #BBD2C5)",
-    "#606d83"
+    "#606d83",
+    "#939597"
 ];
 
 //How much of the section needs to show? 70% at default
@@ -77,7 +90,7 @@ function navCheck(entries) {
             height: coords.height,
             width: coords.width,
             top: coords.top - 17,
-            left: coords.left
+            left: coords.left            
         };
 
         if (entry.isIntersecting) {
